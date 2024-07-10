@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nelson Foundation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background: #333;
+            color: white;
+            padding: 10px 0;
+        }
+
+        header nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .hero {
+            background: url('https://i.postimg.cc/76cLMZrH/disaable.jpg') no-repeat center center/cover;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .about, .services, .stats, .call-to-action, footer {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .stats div {
+            display: inline-block;
+            width: 23%;
+            margin: 1%;
+        }
+
+        .service {
+            background: #f4f4f4;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        .call-to-action button {
+            background: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            padding: 20px 0;
+        }
+
+        footer nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+        }
+
+        footer nav ul li {
+            margin: 0 15px;
+        }
+
+        footer nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer .newsletter {
+            margin: 20px 0;
+        }
+
+        footer .newsletter form {
+            display: flex;
+            justify-content: center;
+            margin: 10px 0;
+        }
+
+        footer .newsletter form input {
+            padding: 5px;
+            margin-right: 10px;
+        }
+
+        footer .newsletter form button {
+            padding: 5px 10px;
+        }
+
+        footer p {
+            margin-top: 20px;
+        }
+
+        /* WhatsApp Widget */
+        .whatsapp-widget {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25d366;
+            color: white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .whatsapp-widget img {
+            width: 35px;
+            height: 35px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Cases</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Donate Now</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Causes we are serving</h1>
+    </section>
+
+    <section class="about">
+        <h2>Who we are?</h2>
+        <p>nelson Foundation, nelson Foundation, nelson Foundation. nelson Foundation nelson Foundation</p>
+        <p>nelson Foundation, nelson Foundation, nelson Foundation nelson Foundation nelson Foundation,nelson Foundation. nelson Foundation,nelson Foundation, nelson Foundation nelson Foundation nelson Foundation.</p>
+    </section>
+
+    <section class="stats">
+        <div>
+            <h3>35 +</h3>
+            <p>Active Cases</p>
+        </div>
+        <div>
+            <h3>12 m</h3>
+            <p>People Joined</p>
+        </div>
+        <div>
+            <h3>200 m</h3>
+            <p>Cases every Year</p>
+        </div>
+        <div>
+            <h3>1200</h3>
+            <p>People get help from us</p>
+        </div>
+    </section>
+
+    <section class="services">
+        <h2>We serve for people</h2>
+        <div class="service">
+            <h3>Pure Food & Water</h3>
+            <p>, fringilla odio eget, tincidunt nunc duis aliquet pulvinar ante employees and organizations to support.</p>
+        </div>
+        <div class="service">
+            <h3>Health & Medicine</h3>
+            <p>Odio aliquet, fringilla odio eget, tincidunt nunc duis aliquet pulvinar ante employees and organizations to support.</p>
+        </div>
+        <div class="service">
+            <h3>Education</h3>
+            <p>Odio aliquet, fringilla odio eget, tincidunt nunc duis aliquet pulvinar ante employees and organizations to support.</p>
+        </div>
+    </section>
+
+    <section class="call-to-action">
+        <h2>They need your help</h2>
+        <p>Sedac odio aliquet, fringilla odio eget, tincidunt nunc. Duis aliquet pulvinar ante tempor etiam lacus eros</p>
+        <button>Join with Us</button>
+    </section>
+
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="newsletter">
+            <h3>Subscribe newsletter</h3>
+            <p>Subscribe our newsletter to get updates about our services and offers.</p>
+            <form>
+                <input type="email" placeholder="Enter your email">
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+        <p>Copyright ©2020 All rights reserved | This template is made by Nelson Foundation</p>
+    </footer>
+
+    <!-- WhatsApp Widget -->
+    <div class="whatsapp-widget" onclick="window.location.href='https://chat.whatsapp.com/JkZpQMf7bywKANwdgOs8v5'">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
