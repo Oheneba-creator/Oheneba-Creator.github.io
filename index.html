@@ -4,182 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Nelson Foundation</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        header {
-            background: #333;
-            color: white;
-            padding: 10px 0;
-        }
-
-        header nav ul {
-            list-style-type: none;
-            display: flex;
-            justify-content: center;
-            padding: 0;
-        }
-
-        header nav ul li {
-            margin: 0 15px;
-        }
-
-        header nav ul li a {
-            color: white;
-            text-decoration: none;
-        }
-
-        .hero {
-            background: url('https://i.postimg.cc/76cLMZrH/disaable.jpg') no-repeat center center/cover;
-            height: 300px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-        }
-
-        .about, .services, .stats, .call-to-action, footer {
-            padding: 20px;
-            text-align: center;
-        }
-
-        .stats div {
-            display: inline-block;
-            width: 23%;
-            margin: 1%;
-        }
-
-        .service {
-            background: #f4f4f4;
-            padding: 15px;
-            margin: 15px 0;
-        }
-
-        .call-to-action button {
-            background: #333;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-        }
-
-        footer {
-            background: #333;
-            color: white;
-            padding: 20px 0;
-        }
-
-        footer nav ul {
-            list-style-type: none;
-            display: flex;
-            justify-content: center;
-            padding: 0;
-        }
-
-        footer nav ul li {
-            margin: 0 15px;
-        }
-
-        footer nav ul li a {
-            color: white;
-            text-decoration: none;
-        }
-
-        footer .newsletter {
-            margin: 20px 0;
-        }
-
-        footer .newsletter form {
-            display: flex;
-            justify-content: center;
-            margin: 10px 0;
-        }
-
-        footer .newsletter form input {
-            padding: 5px;
-            margin-right: 10px;
-        }
-
-        footer .newsletter form button {
-            padding: 5px 10px;
-        }
-
-        footer p {
-            margin-top: 20px;
-        }
-
-        /* WhatsApp Widget */
-        .whatsapp-widget {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #25d366;
-            color: white;
-            border-radius: 50%;
-            width: 60px;
-            height: 60px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-            cursor: pointer;
-            z-index: 1000;
-        }
-
-        .whatsapp-widget img {
-            width: 35px;
-            height: 35px;
-        }
-
-        /* Mobile Styles */
-        /* Mobile Styles */
-@media (max-width: 768px) {
-    header nav ul {
-        display: none;
-        flex-direction: column;
-        background: #333;
-        width: 100%;
-        padding: 0;
-        margin: 0;
-    }
-
-    header nav ul.mobile-menu {
-        display: flex;
-    }
-
-    header nav ul li {
-        margin: 3px 0; /* Add margin to menu items */
-    }
-
-    header nav ul li a {
-        padding: 10px;
-        display: block;
-    }
-
-    .menu-toggle {
-        display: block;
-        background: #333;
-        color: white;
-        padding: 10px;
-        text-align: center;
-        cursor: pointer;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 20px;
-    }
-
-    .menu-toggle span {
-        font-size: 18px;
-    }
-}
-
-    </style>
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
     <header>
@@ -189,22 +14,24 @@
                 <span>&#9776;</span>
             </div>
             <ul id="nav-menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="team.html">Team</a></li>
                 <li><a href="#">Contact</a></li>
-                <li><a href="Donate.html">Donate Now</a></li>
+                <li><a href="Donate.html" id="btn">Donate Now</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="hero">
-        <h1>Causes we are serving</h1>
+        <h1 style="font-size: xx-large;">Causes we are serving</h1>
     </section>
 
     <section class="about">
         <h2>Who we are?</h2>
         <p>At The Nelson Foundation, we are dedicated to making a difference in the lives of disabled females.</p>
         <p> Our mission is to provide support, resources, and opportunities to empower women with disabilities, helping them lead independent and fulfilling lives.</p>
+        <a href="about.html" id="btn">Discover More</a>
     </section>
 
     <section class="stats">
@@ -217,8 +44,8 @@
             <p>People Joined</p>
         </div>
         <div>
-            <h3>Our Team</h3>
-            <p><a href="team.html">View Team</a></p>
+            <h3>9+</h3>
+            <p> Active Executives</p>
         </div>
         <div>
             <h3>1200</h3>
@@ -238,21 +65,21 @@
         </div>
         <div class="service">
             <h3>Education</h3>
-            <p>Odio aliquet, fringilla odio eget, tincidunt nunc duis aliquet pulvinar ante employees and organizations to support.</p>
+            <p>Our educational initiatives provide access to quality education and vocational training, enabling women to acquire new skills and enhance their employability.</p>
         </div>
     </section>
 
     <section class="call-to-action">
         <h2>They need your help</h2>
         <p>We invite you to join us in our mission to support disabled females. Whether through volunteering, donating, or spreading the word about our cause, your involvement can make a significant difference.</p>
-        <button><a href="https://chat.whatsapp.com/JkZpQMf7bywKANwdgOs8v5" >Join with Us</a></button>
+        <a href="https://chat.whatsapp.com/JkZpQMf7bywKANwdgOs8v5" id="btn" >Join with Us</a>
     </section>
 
     <footer>
         <nav>
             <ul>
                 <li><a href="Donate.html">Donate</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="#">Blog</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
@@ -265,7 +92,7 @@
                 <button type="submit">Subscribe</button>
             </form>
         </div>
-        <p>Copyright ©2024 All rights reserved | This site made by Nelson Foundation</p>
+        <p>Copyright ©2024 All rights reserved |Nelson Foundation</p>
     </footer>
 
     <!-- WhatsApp Widget -->
