@@ -155,6 +155,32 @@
         </div>
 
         <!-- Add other team members similarly -->
+        <section class="testimonials">
+            <h2>What People Say About Us</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial-slide">
+                    <img src="https://i.postimg.cc/xd7CTz6G/image-4.png" alt="Person 1">
+                    <blockquote>
+                        "The Nelson Foundation has truly changed my life. Their support has been invaluable."
+                    </blockquote>
+                    <p>- Helina Boafo</p>
+                </div>
+                <div class="testimonial-slide">
+                    <img src="https://i.postimg.cc/xd7CTz6G/image-4.png" alt="Person 2">
+                    <blockquote>
+                        "I couldn't be more grateful for the opportunities they've provided me."
+                    </blockquote>
+                    <p>- Rebecca Arthur</p>
+                </div>
+                <div class="testimonial-slide">
+                    <img src="https://i.postimg.cc/xd7CTz6G/image-4.png" alt="Person 3">
+                    <blockquote>
+                        "Their dedication and passion are evident in everything they do."
+                    </blockquote>
+                    <p>- Lydia Quarm</p>
+                </div>
+            </div>
+        </section>    
     </section>
     <footer>
         <nav>
@@ -183,6 +209,22 @@
             var menu = document.getElementById('nav-menu');
             menu.classList.toggle('mobile-menu');
         }
+      
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.testimonial-slide');
+    
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.style.display = (i === index) ? 'block' : 'none';
+        });
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    setInterval(nextSlide, 3000); // Change slide every 3 seconds
     </script>
 </body>
 </html>
