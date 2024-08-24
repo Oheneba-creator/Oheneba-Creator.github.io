@@ -117,6 +117,32 @@
         <h3>OUR IMPACT</h3>
         <p>Since our inception, The Nelson Foundation has positively impacted the lives of numerous disabled females. We have seen women gain confidence, secure employment, and build meaningful relationships, all while contributing to their communities.</p>
     </div>
+    <section class="testimonials">
+        <h2>What People Say About Us</h2>
+        <div class="testimonial-slider">
+            <div class="testimonial-slide">
+                <img src="https://via.placeholder.com/150" alt="Person 1">
+                <blockquote>
+                    "The Nelson Foundation has truly changed my life. Their support has been invaluable."
+                </blockquote>
+                <p>- project manager</p>
+            </div>
+            <div class="testimonial-slide">
+                <img src="https://via.placeholder.com/150" alt="Person 2">
+                <blockquote>
+                    "I couldn't be more grateful for the opportunities they've provided me."
+                </blockquote>
+                <p>- kyekyeku-tech</p>
+            </div>
+            <div class="testimonial-slide">
+                <img src="https://via.placeholder.com/150" alt="Person 3">
+                <blockquote>
+                    "Their dedication and passion are evident in everything they do."
+                </blockquote>
+                <p>- nelson isaac</p>
+            </div>
+        </div>
+    </section>    
     <footer>
         <nav>
             <ul>
@@ -140,10 +166,26 @@
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
     </div>
     <script>
-        function toggleMenu() {
+         function toggleMenu() {
             var menu = document.getElementById('nav-menu');
             menu.classList.toggle('mobile-menu');
         }
+      
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.testimonial-slide');
+    
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.style.display = (i === index) ? 'block' : 'none';
+        });
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    setInterval(nextSlide, 3000); // Change slide every 3 seconds
     </script>
 </body>
 </html>
