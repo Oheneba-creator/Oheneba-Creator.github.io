@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>The Nelson Foundation</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#our-team {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.team-member {
+    width: 20%; /* Adjust width based on the number of team members per row */
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+@media (max-width: 768px) {
+    .team-member {
+    width: 60%; /* Adjust width based on the number of team members per row */
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+}
+
+.member-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.member-info img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.member-info h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.member-info p {
+    margin: 0;
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="https://i.postimg.cc/R0J1GfYp/tnf-logo.jpg" alt="The Nelson Foundation Logo">
+            </div>
+            <div class="social-icons">
+                <a href="tel:+23350848284">Call Us<i class="fa fa-phone"></i></a>
+            </div>
+            <nav>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span>Menu</span>
+                <span>&#9776;</span>
+            </div>
+            <ul id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="mailto:thenelsonfoundation@zohomail.com">Contact</a></li>
+                    <li><a href="Donate.html" id="btn">Donate Now</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="our-team">
+        <div class="team-member">
+            <div class="member-info">
+                <img src="https://i.postimg.cc/fTp3HYv4/ike.jpg" alt="Founder">
+                <h3>Founder</h3>
+                <p>Isaac Opoku Nelson</p>
+            </div>
+        </div>
+
+        <div class="team-member">
+            <div class="member-info">
+                <img src="https://i.postimg.cc/T2QYsnf7/collins1-removebg-preview.png" alt="Public Relations Officer (PRO)">
+                <h3>Secretary</h3>
+                <p>Collins Kweku Baidoo</p>
+            </div>
+        </div>
+        <div class="team-member">
+            <div class="member-info">
+                <img src="https://i.postimg.cc/xd7CTz6G/image-4.png" alt="Public Relations Officer (PRO)">
+                <h3>Organizer</h3>
+                <p>Samuel Kumah</p>
+            </div>
+        </div>
+       
+        <div class="team-member">
+            <div class="member-info">
+                <img src="https://i.postimg.cc/RVX6wjW0/fredereck-removebg-preview.png" alt="Public Relations Officer (PRO)">
+                <h3>Social Media Representative</h3>
+                <p>Frederick Donkor</p>
+            </div>
+        </div>
+        <div class="team-member">
+            <div class="member-info">
+                <img src="https://telegra.ph/file/7bc2c08d3b722da63e2b6.jpg" alt="Public Relations Officer (PRO)">
+                <h3>Project Coordinator</h3>
+                <p>Oppong Safo</p>
+            </div>
+        </div>
+        <div class="team-member">
+            <div class="member-info">
+                <img src="https://i.postimg.cc/MH5d1qMD/francisca.jpg" alt="Public Relations Officer (PRO)">
+                <h3>Public Relations Officer (PRO)</h3>
+                <p>Francisca Gyambrah</p>
+            </div>
+        </div>
+        <div class="team-member">
+            <div class="member-info">
+                <img src="https://i.postimg.cc/mDjR0Gfz/julius-removebg-preview.png" alt="Public Relations Officer (PRO)">
+                <h3>Financial Secretary</h3>
+                <p>Julius Kojo Acheampong</p>
+            </div>
+        </div>
+        <div class="team-member">
+            <div class="member-info">
+                <img src="https://i.postimg.cc/xd7CTz6G/image-4.png" alt="Public Relations Officer (PRO)">
+                <h3>Research Manager</h3>
+                <p>[Position Currently Vacant]</p>
+            </div>
+        </div>
+
+        <!-- Add other team members similarly -->
+        <section class="testimonials">
+            <h2>What People Say About Us</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial-slide">
+                    <img src="https://i.postimg.cc/xd7CTz6G/image-4.png" alt="Person 1">
+                    <blockquote>
+                        "The Nelson Foundation has truly changed my life. Their support has been invaluable."
+                    </blockquote>
+                    <p>- Helina Boafo</p>
+                </div>
+                <div class="testimonial-slide">
+                    <img src="https://i.postimg.cc/xd7CTz6G/image-4.png" alt="Person 2">
+                    <blockquote>
+                        "I couldn't be more grateful for the opportunities they've provided me."
+                    </blockquote>
+                    <p>- Rebecca Arthur</p>
+                </div>
+                <div class="testimonial-slide">
+                    <img src="https://i.postimg.cc/xd7CTz6G/image-4.png" alt="Person 3">
+                    <blockquote>
+                        "Their dedication and passion are evident in everything they do."
+                    </blockquote>
+                    <p>- Lydia Quarm</p>
+                </div>
+            </div>
+        </section>    
+    </section>
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="Donate.html">Donate</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="newsletter">
+            <h3>Subscribe newsletter</h3>
+            <p>Subscribe our newsletter to get updates about our services and offers.</p>
+            <form>
+                <input type="email" placeholder="Enter your email">
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+        <p>Copyright ©2024 All rights reserved | Nelson Foundation</p>
+    </footer>
+    <div class="whatsapp-widget" onclick="window.location.href='https://chat.whatsapp.com/JkZpQMf7bywKANwdgOs8v5'">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </div>
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('mobile-menu');
+        }
+      
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.testimonial-slide');
+    
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.style.display = (i === index) ? 'block' : 'none';
+        });
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    setInterval(nextSlide, 3000); // Change slide every 3 seconds
+    </script>
+</body>
+</html>
+
+</body>
+</html>
