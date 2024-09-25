@@ -8,6 +8,56 @@
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="icon" type="image/png" sizes="32x32" href="https://i.postimg.cc/R0J1GfYp/tnf-logo.jpg">
     <style>
+       .image-container {
+            position: relative;
+            display: inline-block;
+            width: 200px; /* Set width of container */
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            z-index: 1; /* Ensures the image stays on top */
+        }
+
+        /* Text behind the image */
+        .image-container .text-behind {
+            position: absolute;
+            top: 50%;
+            left: 150%;
+            transform: translate(-50%, -50%);
+            font-size: 34px;
+            font-style: italic;
+            color: rgba(22, 4, 105, 0.6); /* Semi-transparent white */
+            z-index: 0; /* Ensures the text is behind the image */
+            pointer-events: none; /* Make sure it's not clickable */
+        }
+
+        /* Animation effect */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .image-container img {
+            animation: pulse 2s infinite;
+        }
+
+        /* Styling the form container */
+        .form-container {
+            display: none;
+            width: 640px;
+            height: 480px;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -17,7 +67,6 @@
                 <img src="https://i.postimg.cc/R0J1GfYp/tnf-logo.jpg" alt="The Nelson Foundation Logo">
             </div>
             <div class="social-icons">
-            <a href="tel:+23350848284">Call Us<i class="fa fa-phone"></i></a>
         </div>
             <nav>
                 <div class="menu-toggle" onclick="toggleMenu()">
@@ -38,13 +87,24 @@
         <h1 style="font-size: xxx-large;">Causes we are serving</h1>
     </section>
 
+    <a href="t-shirt.html" class="animated-btn" onclick="showForm()">
+        <div class="image-container">
+            <img src="https://i.postimg.cc/d07r0bSM/NELSON.jpg" alt="T-Shirt Request Button">
+            <div class="text-behind">T-Shirt Request</div>
+        </div>
+    </a>
+    
+    <p style="color: #0b0161; font-size: 1.2em; font-weight: bold; text-align: center; margin-top: 20px;">
+        Don't scroll away! Click on the T-shirt image above to request your exclusive T-shirt & Cap.
+      </p>
+      
+    
     <section class="about">
         <h2>Who we are?</h2>
         <p>At The Nelson Foundation, we are dedicated to making a difference in the lives of disabled females.</p>
         <p> Our mission is to provide support, resources, and opportunities to empower women with disabilities, helping them lead independent and fulfilling lives.</p>
         <a href="about.html" id="btn">Discover More</a>
     </section>
-
     <section class="stats">
         <div>
             <h3>loading...+</h3>
