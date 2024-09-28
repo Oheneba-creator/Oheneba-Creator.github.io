@@ -7,139 +7,131 @@
     <title>The Nelson Foundation</title>
     <link rel="stylesheet" href="CSS/style.css">
     <style>
-     
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    background-image: none;
-}
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
 
-/* Hero Section */
-.hero-section {
-    background-image: url('https://i.postimg.cc/g0rtkZj1/image.jpg');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    text-align: center;
-    padding: 100px 20px;
-}
+        /* Modern Hero Section */
+        .hero-section {
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+            position: relative;
+            z-index: 1;
+        }
 
-.hero-section h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-}
+        .hero-section::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: -1;
+        }
 
-.hero-section p {
-    font-size: 1.2em;
-}
+        .hero-section h1 {
+            font-size: 3.5em;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
 
-/* About Us Section */
-.about-us {
-    padding: 50px 20px;
-    text-align: center;
-    background-color: #3c07fd;
-}
+        .hero-section p {
+            font-size: 1.5em;
+            font-weight: 300;
+        }
 
-.about-us img {
-    width: 100%;
-    max-width: 600px;
-    margin-top: 20px;
-}
+        /* Modern About Us Section */
+        .about-us {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #333;
+            color: white;
+        }
 
-/* Blog Post Section */
-.blog-post {
-    padding: 50px 20px;
-}
+        .about-us img {
+            width: 100%;
+            max-width: 600px;
+            margin-top: 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
 
-.blog-post h2 {
-    text-align: center;
-    margin-bottom: 30px;
-}
+        /* Blog Posts Section */
+        .blog-post {
+            padding: 60px 20px;
+            background-color: #f7f7f7;
+        }
 
-.blog-post article {
-    text-align: center;
-}
+        .blog-post h2 {
+            text-align: center;
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 30px;
+        }
 
-.blog-post img {
-    width: 100%;
-    max-width: 800px;
-    margin-bottom: 20px;
-}
+        .blog-post article {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
 
-.blog-post h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
+        .blog-card {
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin: 15px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
 
-.blog-post p {
-    font-size: 1em;
-    margin-bottom: 20px;
-}
+        .blog-card:hover {
+            transform: translateY(-10px);
+        }
 
-/* Buttons */
-.next-btn, .prev-btn {
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
-    border: none;
-    cursor: pointer;
-    margin: 5px;
-    transition: background-color 0.3s;
-}
+        .blog-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
 
-.next-btn:hover, .prev-btn:hover {
-    background-color: #555;
-}
+        .blog-card h3 {
+            padding: 15px;
+            font-size: 1.5em;
+            color: #333;
+        }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: white;
-}
-.testimonials {
-    padding: 50px 20px;
-    background-color: transparent;
-    text-align: center;
-}
+        .blog-card p {
+            padding: 0 15px 15px;
+            font-size: 1em;
+            color: #666;
+        }
 
-.testimonials h2 {
-    margin-bottom: 20px;
-    font-size: 2em;
-    color: #0408fc;
-}
+        .next-btn, .prev-btn {
+            padding: 10px 30px;
+            background-color: #1f08ee;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+            transition: background-color 0.3s ease;
+        }
 
-.testimonial-slider {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-}
+        .next-btn:hover, .prev-btn:hover {
+            background-color: #b848ff;
+        }
 
-.testimonial-slide {
-    display: none;
-    padding: 20px;
-    text-align: center;
-}
-
-.testimonial-slide img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 15px;
-}
-
-.testimonial-slide blockquote {
-    font-size: 1.2em;
-    font-style: italic;
-    margin-bottom: 10px;
-    color: #333232;
-}
-
+    
     </style>
 </head>
 <body>
@@ -148,9 +140,7 @@ footer {
             <div class="logo">
                 <img src="https://i.postimg.cc/R0J1GfYp/tnf-logo.jpg" alt="The Nelson Foundation Logo">
             </div>
-            <div class="social-icons">
-                <a href="tel:+233550848284">Call Us<i class="fa fa-phone"></i></a>
-            </div>
+            
             <nav>
                 <div class="menu-toggle" onclick="toggleMenu()">
                     <span>Menu</span>
@@ -171,22 +161,35 @@ footer {
         <h1>Welcome to The Nelson Foundation Blog</h1>
         <p>Empowering Female Persons with Disabilities</p>
     </section>
-
+    
     <!-- About Us Section -->
     <section class="about-us">
         <h2>About Us</h2>
         <p>The Nelson Foundation is dedicated to empowering female persons with disabilities by providing them with opportunities to succeed.</p>
-        <img src="about-us-image.jpg" alt="Team of The Nelson Foundation">
+        <img src="https://i.postimg.cc/prLF0n16/IMG-20240627-WA0043.jpg" alt="Team of The Nelson Foundation">
     </section>
 
     <!-- Blog Post Section -->
     <section class="blog-post">
         <h2>Our Latest Work</h2>
         <article>
-            <img src="blog-post-image.jpg" alt="Blog Post Image">
-            <h3>Post Title</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisi vel consectetur...</p>
-            <button class="next-btn">Next</button>
+            <div class="blog-card">
+                <img src="https://th.bing.com/th/id/OIP.Z49LScyDyiFSu0pAb0saVAHaEK?w=672&h=378&rs=1&pid=ImgDetMain" alt="Blog Post Image">
+                <h3>Post Title 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisi vel consectetur...</p>
+            </div>
+            <div class="blog-card">
+                <img src="https://th.bing.com/th/id/OIP.Z49LScyDyiFSu0pAb0saVAHaEK?w=672&h=378&rs=1&pid=ImgDetMain" alt="Blog Post Image">
+                <h3>Post Title 2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisi vel consectetur...</p>
+            </div>
+            <div class="blog-card">
+                <img src="https://th.bing.com/th/id/OIP.Z49LScyDyiFSu0pAb0saVAHaEK?w=672&h=378&rs=1&pid=ImgDetMain" alt="Blog Post Image">
+                <h3>Post Title 3</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisi vel consectetur...</p>
+            </div>
+        </article>
+        <button class="next-btn">Next</button>
             <button class="prev-btn">Previous</button>
         </article>
     </section>
@@ -251,12 +254,12 @@ const blogPosts = [
     {
         title: "Post Title 1",
         content: "Content for Post 1...",
-        image: "blog-post-image1.jpg"
+        image: "https://th.bing.com/th/id/OIP.Z49LScyDyiFSu0pAb0saVAHaEK?w=672&h=378&rs=1&pid=ImgDetMain"
     },
     {
         title: "Post Title 2",
         content: "Content for Post 2...",
-        image: "blog-post-image2.jpg"
+        image: "https://i.postimg.cc/MTGZYRWF/tnf-hero.jpg"
     }
     // Add more posts as needed
 ];
