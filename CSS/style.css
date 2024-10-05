@@ -10,7 +10,8 @@ body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     color: #070707;
-    background-image: url('https://i.postimg.cc/MTGZYRWF/tnf-hero.jpg');
+    background-image: url('https://kyekyeku-tech.site/OIP.jpeg');
+    background-size: cover;
     padding: 0;
     margin: 0;
 }
@@ -139,7 +140,7 @@ header nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: rgb(255, 255, 255);
     text-align: center;
     background-color: rgba(0, 0, 27, 0.37);
 }

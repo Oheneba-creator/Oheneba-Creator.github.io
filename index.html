@@ -97,7 +97,51 @@
     font-size: 1.1em;
     color: #fdfafa;
 }
+ .profile-container {
+            position: absolute;
+            top: 30px;
+            left: 150px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
 
+        .profile-container img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            transition: transform 0.2s ease;
+        }
+
+        .profile-container:hover img {
+            transform: scale(1.1);
+        }
+
+        .profile-container input[type="file"] {
+            display: none;
+        }
+
+        .profile-container label {
+            font-size: 0.8em;
+            color: white;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        
+        .profile-upload-btn {
+            margin-top: 10px;
+            padding: 5px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .profile-upload-btn:hover {
+            background-color: #0056b3;
+        }
 
     </style>
 </head>
@@ -122,6 +166,11 @@
                     <li><a href="Donate.html" id="btn">Donate</a></li>
                 </ul>
             </nav>
+        </div>
+        <div class="profile-container">
+            <img id="profile-picture" src="https://via.placeholder.com/50" alt="Profile Picture">
+            <label for="file-upload">Profile</label>
+            <input type="file" id="file-upload" accept="image/*" onchange="previewProfilePicture(event)">
         </div>
     </header>
     <section class="hero">
@@ -255,81 +304,22 @@
     <div class="whatsapp-widget" onclick="window.location.href='https://chat.whatsapp.com/JkZpQMf7bywKANwdgOs8v5'">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
     </div>
+    
+    
     <script>
-        // Firebase configuration
-        const firebaseConfig = {
-            apiKey: "AIzaSyC0UoAmAQ7-QGaISEyCI897eVqUXwE01A8",
-            authDomain: "second-impact-417012.firebaseapp.com",
-            projectId: "second-impact-417012",
-            storageBucket: "second-impact-417012.appspot.com",
-            messagingSenderId: "647158919272",
-            appId: "1:647158919272:web:eb21786fd18f5be5220bdd",
-            measurementId: "G-V0VL794NE2"
-        };
-    
-        // Initialize Firebase
-        const app = firebase.initializeApp(firebaseConfig);
-        const auth = firebase.auth();
-    </script> 
-    <script>
-        // Sign up function
-        function signup() {
-            const username = document.getElementById('signup-username').value;
-            const email = document.getElementById('signup-email').value;
-            const password = document.getElementById('signup-password').value;
-    
-            auth.createUserWithEmailAndPassword(email, password)
-                .then((userCredential) => {
-                    const user = userCredential.user;
-                    user.updateProfile({
-                        displayName: username
-                    }).then(() => {
-                        alert('User created and signed in!');
-                        showGreeting(username);
-                    });
-                })
-                .catch((error) => {
-                    alert(error.message);
-                });
+        function previewProfilePicture(event) {
+            const profilePic = document.getElementById('profile-picture');
+            const file = event.target.files[0];
+            const reader = new FileReader();
+
+            reader.onload = function(e) {
+                profilePic.src = e.target.result;
+            };
+
+            if (file) {
+                reader.readAsDataURL(file);
+            }
         }
-    
-        // Sign in function
-        function signin() {
-            const email = document.getElementById('signin-email').value;
-            const password = document.getElementById('signin-password').value;
-    
-            auth.signInWithEmailAndPassword(email, password)
-                .then((userCredential) => {
-                    const user = userCredential.user;
-                    const username = user.displayName;
-                    showGreeting(username);
-                })
-                .catch((error) => {
-                    alert(error.message);
-                });
-        }
-    
-        // Show greeting
-        function showGreeting(username) {
-            document.getElementById('greeting-message').style.display = 'block';
-            document.getElementById('user-name').textContent = username;
-            document.getElementById('signup-form').style.display = 'none';
-            document.getElementById('signin-form').style.display = 'none';
-        }
-    
-        // Logout function (optional)
-        function logout() {
-            auth.signOut().then(() => {
-                alert('Signed out');
-                document.getElementById('greeting-message').style.display = 'none';
-                document.getElementById('signup-form').style.display = 'block';
-                document.getElementById('signin-form').style.display = 'block';
-            }).catch((error) => {
-                alert(error.message);
-            });
-        }
-    </script>
-    <script>
         function toggleMenu() {
             var menu = document.getElementById('nav-menu');
             menu.classList.toggle('mobile-menu');
