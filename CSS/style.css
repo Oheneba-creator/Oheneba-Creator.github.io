@@ -9,9 +9,9 @@
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
-    color: #070707;
-    background-image: url('https://thenelsonfoundation.online/b.jpeg');
-    background-size: cover;
+    color: #f1ebeb;
+    background-image: url('https://i.postimg.cc/MTGZYRWF/tnf-hero.jpg');
+    background-size: contain;
     padding: 0;
     margin: 0;
 }
@@ -22,8 +22,8 @@ body {
 }
 /* Header and Navigation */
 header {
-    background: transparent;
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    background-color: transparent;
+    box-shadow: 0 5px 5px rgba(3, 3, 117, 0.719);
     padding: 10px 0;
     position: sticky;
     top: 0;
@@ -85,14 +85,14 @@ header nav {
 }
 .testimonials {
     padding: 50px 20px;
-    background-color: rgba(3, 3, 63, 0.733);
+    background-color: rgba(0, 0, 10, 0.719);
     text-align: center;
 }
 
 .testimonials h2 {
     margin-bottom: 20px;
     font-size: 2em;
-    color: #0408fc;
+    color: blue;
 }
 
 .testimonial-slider {
@@ -125,7 +125,7 @@ header nav {
 
 .testimonial-slide p {
     font-weight: bold;
-    color: #020008;
+    color: #a184f5;
 }
 
 /* Show the first slide initially */
@@ -142,13 +142,13 @@ header nav {
     justify-content: center;
     color: rgb(255, 255, 255);
     text-align: center;
-    background-color: rgba(0, 0, 27, 0.37);
+    background-color: rgba(1, 1, 26, 0.603);
 }
 
 .hero h1 {
     font-size: 5rem;
     font-weight: 700;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.445);
+    text-shadow: 2px 2px 5px rgba(1, 1, 17, 0.589);
 }
 
 /* About Section */
@@ -157,9 +157,10 @@ header nav {
     margin: 50px auto;
     padding: 20px;
     text-align: center;
-    background-color: rgba(252, 251, 251, 0.849);
+    background-color: white;
+    color: blue;
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 55px 1px rgba(1, 1, 26, 0.603);
 }
 
 .about h2 {
@@ -190,9 +191,10 @@ header nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: rgba(3, 3, 63, 0.733);
+    background-color: blue;
     color: white;
     padding: 40px 20px;
+    box-shadow: 0 120px 10px rgba(1, 1, 26, 0.603);
 }
 
 .stats div {
@@ -224,7 +226,7 @@ header nav {
     background-color: white;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgb(3, 3, 245);
     text-align: center;
     transition: transform 0.3s ease;
 }
@@ -237,11 +239,12 @@ header nav {
     color: blue;
 }
 .services h2 {
-    color: white;
+    color: rgb(245, 241, 241);
 }
 .service p {
     font-size: 1rem;
     line-height: 1.5;
+    color: #00050a;
 }
 
 .service:hover {
@@ -256,7 +259,7 @@ header nav {
     padding: 40px 20px;
     margin-top: 50px;
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgb(4, 4, 245);
 }
 
 .call-to-action h2 {
@@ -285,7 +288,7 @@ header nav {
 
 /* Footer */
 footer {
-    background-color: #07000077;
+    background-color: black;
     color: white;
     padding: 40px 20px;
     margin-top: 50px;
