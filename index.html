@@ -168,11 +168,6 @@
                 </ul>
             </nav>
         </div>
-        <div class="profile-container">
-            <img id="profile-picture" src="https://via.placeholder.com/50" alt="Profile Picture">
-            <label for="file-upload">Profile</label>
-            <input type="file" id="file-upload" accept="image/*" onchange="previewProfilePicture(event)">
-        </div>
     </header>
     <section class="hero">
         <h1 style="font-size: xxx-large;">Causes we are serving</h1>
@@ -319,19 +314,7 @@
     
     
     <script>
-        function previewProfilePicture(event) {
-            const profilePic = document.getElementById('profile-picture');
-            const file = event.target.files[0];
-            const reader = new FileReader();
-
-            reader.onload = function(e) {
-                profilePic.src = e.target.result;
-            };
-
-            if (file) {
-                reader.readAsDataURL(file);
-            }
-        }
+        
         function toggleMenu() {
             var menu = document.getElementById('nav-menu');
             menu.classList.toggle('mobile-menu');
