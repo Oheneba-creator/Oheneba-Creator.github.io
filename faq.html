@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - The Nelson Foundation</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-container h1 {
+            font-size: 36px;
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        .faq-item {
+            background-color: #fff;
+            border: 2px solid #f05a28;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .faq-item-header {
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            cursor: pointer;
+            background-color: #f05a28;
+            color: white;
+            border-radius: 5px;
+            text-align: left;
+        }
+
+        .faq-item-header:hover {
+            background-color: #ff6f61;
+        }
+
+        .faq-item-content {
+            padding: 15px;
+            background-color: #f9f9f9;
+            display: none;
+            font-size: 16px;
+            color: #555;
+        }
+
+        .faq-item.active .faq-item-content {
+            display: block;
+        }
+
+        .faq-item.active .faq-item-header {
+            background-color: #ff6f61;
+        }
+
+        .back-to-top {
+            display: block;
+            text-align: center;
+            font-size: 16px;
+            margin-top: 30px;
+            color: #f05a28;
+            text-decoration: none;
+        }
+
+        .back-to-top:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="faq-container">
+        <h1>Frequently Asked Questions</h1>
+
+        <div class="faq-item">
+            <div class="faq-item-header">
+                What is The Nelson Foundation's mission?
+            </div>
+            <div class="faq-item-content">
+                <p>Our mission is to provide support, resources, and opportunities to empower women with disabilities, helping them lead independent and fulfilling lives.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-item-header">
+                How can I get involved with The Nelson Foundation?
+            </div>
+            <div class="faq-item-content">
+                <p>You can get involved by volunteering, donating, or joining our community events. For more details, visit our <a href="Donate.html">Donate</a> page or reach out to us.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-item-header">
+                Can I make a donation online?
+            </div>
+            <div class="faq-item-content">
+                <p>Yes, donations can be made easily through our website. Simply visit our <a href="Donate.html">Donate</a> page to get started.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-item-header">
+                Where does The Nelson Foundation operate?
+            </div>
+            <div class="faq-item-content">
+                <p>The Nelson Foundation operates primarily in Ghana, focusing on empowering disabled females in various communities. However, we welcome global partnerships and support.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-item-header">
+                How can I contact The Nelson Foundation?
+            </div>
+            <div class="faq-item-content">
+                <p>You can contact us via email at <a href="mailto:thenelsonfoundation@zohomail.com">thenelsonfoundation@zohomail.com</a> or call us at 0545454000. You can also visit our <a href="contact.html">Contact Us</a> page for more information.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-item-header">
+                Are donations tax-deductible?
+            </div>
+            <div class="faq-item-content">
+                <p>Yes, donations to The Nelson Foundation are tax-deductible. Please consult with your local tax advisor for further details on how to claim this benefit.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-item-header">
+                Can I volunteer for The Nelson Foundation?
+            </div>
+            <div class="faq-item-content">
+                <p>Yes! We welcome volunteers to help us with various tasks such as event coordination, outreach programs, and more. If you’re interested, please visit our <a href="contact.html">Contact Us</a> page for volunteer opportunities.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-item-header">
+                What types of support does The Nelson Foundation provide?
+            </div>
+            <div class="faq-item-content">
+                <p>The Nelson Foundation offers counseling, career guidance, educational programs, and advocacy services to empower women with disabilities. We also provide vocational training and assistance in securing employment.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-item-header">
+                How can I stay updated on The Nelson Foundation’s activities?
+            </div>
+            <div class="faq-item-content">
+                <p>You can stay updated by subscribing to our newsletter on the website, following us on social media, or regularly checking our <a href="blog.html">Blog</a> for updates and news.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-item-header">
+                Can I partner with The Nelson Foundation?
+            </div>
+            <div class="faq-item-content">
+                <p>Yes! We welcome partnerships with other organizations, businesses, and individuals. Please reach out to us via the <a href="contact.html">Contact Us</a> page to discuss potential collaborations.</p>
+            </div>
+        </div>
+
+        <a href="#top" class="back-to-top">Back to top</a>
+    </div>
+
+    <script>
+        // Script to toggle FAQ answers
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            const header = item.querySelector('.faq-item-header');
+            header.addEventListener('click', () => {
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

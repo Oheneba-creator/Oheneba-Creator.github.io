@@ -11,6 +11,91 @@
 <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js"></script>
 
     <style>
+        .hero {
+    position: relative;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    transition: background 1s ease-in-out; /* Smooth background transition */
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+    padding: 40px;
+    border-radius: 10px;
+    animation: fadeInUp 2s ease-in-out; /* Initial animation */
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    max-width: 700px;
+    line-height: 1.6;
+    color: #f3f3f3;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background: orangered;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Animation Effects */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-out {
+    animation: fadeOut 1s forwards;
+}
+
+.fade-in {
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
        .image-container {
             position: relative;
             display: inline-block;
@@ -32,7 +117,7 @@
             transform: translate(-50%, -50%);
             font-size: 34px;
             font-style: italic;
-            color: blue;
+            color: orangered;
             z-index: 0;  
             pointer-events: none; 
         }
@@ -78,7 +163,7 @@
     width: 300px;
     overflow: hidden;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgb(4, 20, 252);
+    box-shadow: 0 4px 6px orangered;
 }
 
 .image-box img {
@@ -133,7 +218,7 @@
         .profile-upload-btn {
             margin-top: 10px;
             padding: 5px 15px;
-            background-color: #007bff;
+            background-color: orangered;
             color: white;
             border: none;
             border-radius: 4px;
@@ -141,7 +226,7 @@
         }
 
         .profile-upload-btn:hover {
-            background-color: #0056b3;
+            background-color: orangered;
         }
 
     </style>
@@ -161,7 +246,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="team.html">Team</a></li>
-                    <li><a href="mailto:thenelsonfoundation@zohomail.com">Contact</a></li>
+                    <li><a href="#contact">Contact</a></li>
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="gallary.html">Gallery</a></li>
                     <li><a href="Donate.html" id="btn">Donate</a></li>
@@ -169,20 +254,14 @@
             </nav>
         </div>
     </header>
-    <section class="hero">
-        <h1 style="font-size: xxx-large;">Causes we are serving</h1>
+    <section class="hero" id="hero">
+        <div class="hero-overlay">
+            <h1 id="hero-title">Empowering Women, Transforming Lives</h1>
+            <p id="hero-text">Together, we can create a world where every woman feels valued and empowered, regardless of her physical abilities.</p>
+            <a href="Donate.html" class="hero-btn">Donate Now</a>
+        </div>
     </section>
 
-    <a href="https://forms.office.com/r/p1yLDz0YQ9" class="animated-btn" onclick="showForm()">
-        <div class="image-container">
-            <img src="https://i.postimg.cc/d07r0bSM/NELSON.jpg" alt="T-Shirt Request Button">
-            <div class="text-behind">T-Shirt Request</div>
-        </div>
-    </a>
-    <p style="color: #f4f4f7; background-color: rgba(1, 1, 26, 0.603); box-shadow: 0 55px 1px rgba(1, 1, 26, 0.603); font-size: 1.2em; font-weight: bold; text-align: center; margin-top: 20px;">
-        Don't scroll away! Click on the T-shirt image above to request your exclusive T-shirt & Cap.
-      </p>
-    
     <section class="about">
         <h2>Who we are?</h2>
         <p>At The Nelson Foundation, we are dedicated to making a difference in the lives of disabled females.</p>
@@ -223,41 +302,17 @@
             <p>Our educational initiatives provide access to quality education and vocational training, enabling women to acquire new skills and enhance their employability.</p>
         </div>
     </section>
-    <section class="image-gallery">
-        <h2 style="color: red;">Empowering Women with Disabilities</h2>
-        <div class="gallery-container">
-            <div class="image-box">
-                <img src="https://i.postimg.cc/L8T9cSb1/tnf-af.jpg" alt="Disabled Female 1">
-                <p class="image-caption">Our Dream to make them smile always</p>
-            </div>
-            <div class="image-box">
-                <img src="https://i.postimg.cc/j2FNQNzR/tnf-a.jpg" alt="Disabled Female 1">
-                <p class="image-caption">To build a world where every woman, regardless of her physical abilities, has equal opportunities to succeed</p>
-            </div>
-            <div class="image-box">
-                <img src="https://i.postimg.cc/cHWcrQcj/disability-pictures.jpg" alt="Disabled Female 1">
-                <p class="image-caption">we are dedicated to making a difference in the lives of disabled females.</p></p>
-            </div>
-            <div class="image-box">
-                <img src="https://i.postimg.cc/XvqbtC5R/3-1.jpg" alt="Disabled Female 2">
-                <p class="image-caption">Their happiness is our concern</p>
-            </div>
-            <div class="image-box">
-                <img src="https://i.postimg.cc/dVHMRVf4/afric-tnf.jpg" alt="Disabled Female 3">
-                <p class="image-caption">To provide opportunities to empower women with disabilities, helping them lead independent and fulfilling lives.</p>
-            </div>
-            <div class="image-box">
-                <img src="https://i.postimg.cc/7YNr6Vnv/afri-tnf.jpg" alt="Disabled Female 3">
-                <p class="image-caption">To provide support, resources, opportunities etc.</p>
-            </div></p>
-            </div>
-        </div>
-    </section>
-    
     <section class="call-to-action">
         <h2>They need your help</h2>
         <p>We invite you to join us in our mission to support disabled females. Whether through volunteering, donating, or spreading the word about our cause, your involvement can make a significant difference.</p>
         <a href="https://chat.whatsapp.com/JkZpQMf7bywKANwdgOs8v5" id="btm" >Join with Us</a>
+    </section>
+    <section class="hero" id="hero">
+        <div class="hero-overlay">
+            <h1 id="hero-title">Empowering Women, Transforming Lives</h1>
+            <p id="hero-text">Together, we can create a world where every woman feels valued and empowered, regardless of her physical abilities.</p>
+            <a href="Donate.html" class="hero-btn">Donate Now</a>
+        </div>
     </section>
     <section class="testimonials">
         <h2>Testamonials </h2>
@@ -284,28 +339,72 @@
                 <p>- Lydia Quarm</p>
             </div>
         </div>
-    </section>    
+    </section> 
+    <div class="contact-container" id="contact">
+        <form class="contact-form" action="submit_form.php" method="POST">
+            <h2>Contact Us</h2>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+            <p>Have a question? <a href="faq.html">Visit our FAQ</a></p>
+        </form>
+    </div>   
     <footer>
-        <nav>
-            <ul>
-                <li><a href="Donate.html">Donate</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="mailto:thenelsonfoundation@zohomail.com">Contact us</a></li>
-                <li><a href="gallary.html">Gallery</a></li>
-            </ul>
-        </nav>
-        </nav>
-        <div class="newsletter">
-            <h3>Subscribe newsletter</h3>
-            <p>Subscribe our newsletter to get updates about our services and offers.</p>
-            <form>
-                <input type="email" placeholder="Enter your email">
-                <button type="submit">Subscribe</button>
-            </form>
+        <div class="footer-container">
+            <!-- Logo Section -->
+            <div class="footer-logo">
+                <img src="https://i.postimg.cc/R0J1GfYp/tnf-logo.jpg" alt="The Nelson Foundation Logo">
+            </div>
+    
+            <!-- Navigation Section -->
+            <nav>
+                <ul class="footer-nav">
+                    <li><a href="Donate.html">Donate</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="mailto:thenelsonfoundation@zohomail.com">Contact Us</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </nav>
+    
+            <!-- Contact Information -->
+            <div class="footer-contact">
+                <p>Let's Connect:</p>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> Takoradi Axim, Ghana</li>
+                    <li><i class="fas fa-phone-alt"></i>0550848284</a></li>
+                    <li><i class="fas fa-envelope"></i>support@thenelsonfoundation.online</li>
+                    <li><i class="fab fa-whatsapp"></i>0545454000</li>
+                </ul>
+            </div>
+    
+            <!-- Working Hours -->
+            <div class="footer-hours">
+                <i class="fa fa-clock"></i> working Hours</li>
+                <ul>
+                    <li>Monday - Friday</li>
+                    <li>8:00 AM - 5:30 PM</li>
+                </ul>
+            </div>
+    
+            <!-- Newsletter Section -->
+            <div class="newsletter">
+                <h3>Subscribe to Our Newsletter</h3>
+                <p>Subscribe to get updates about our services and offers.</p>
+                <form>
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
         </div>
-        <p>Copyright ©2024 All rights reserved |Nelson Foundation</p>
+    
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>Copyright ©2024 The Nelson Foundation. All rights reserved.</p>
+        </div>
     </footer>
+    
 
     <!-- WhatsApp Widget -->
     <div class="whatsapp-widget" onclick="window.location.href='https://chat.whatsapp.com/JkZpQMf7bywKANwdgOs8v5'">
@@ -314,7 +413,50 @@
     
     
     <script>
-        
+        // Hero content data
+    const heroContent = [
+        {
+            image: "https://th.bing.com/th/id/R.080ab20e78a5a84d6d0ba7e852c8bd81?rik=3ffhH%2bKYr98avw&riu=http%3a%2f%2fi.huffpost.com%2fgen%2f1294375%2fimages%2fo-DISABILITY-SEX-facebook.jpg&ehk=44A9FhoZtomPQ3Uj5NH9JPA3T78Zgrueg28nSofRZtM%3d&risl=&pid=ImgRaw&r=0",
+            title: "Empowering Women, Transforming Lives",
+            text: "Together, we can create a world where every woman feels valued and empowered, regardless of her physical abilities."
+        },
+        {
+            image: "https://i.postimg.cc/MTGZYRWF/tnf-hero.jpg",
+            title: "Building a Better Future",
+            text: "Join us in creating opportunities for women with disabilities to achieve their dreams."
+        },
+        {
+            image: "https://th.bing.com/th/id/OIP.cyDGOuypqRYYuobH7UEXbgHaFC?rs=1&pid=ImgDetMain",
+            title: "Every Smile Matters",
+            text: "Your support can make a difference in the lives of many."
+        }
+    ];
+
+    let currentIndex = 0;
+    const heroSection = document.getElementById("hero");
+    const heroTitle = document.getElementById("hero-title");
+    const heroText = document.getElementById("hero-text");
+
+    function updateHeroContent() {
+        // Fade out effect
+        heroSection.classList.add("fade-out");
+        setTimeout(() => {
+            // Update content
+            heroSection.style.backgroundImage = `url('${heroContent[currentIndex].image}')`;
+            heroTitle.textContent = heroContent[currentIndex].title;
+            heroText.textContent = heroContent[currentIndex].text;
+
+            // Fade in effect
+            heroSection.classList.remove("fade-out");
+            heroSection.classList.add("fade-in");
+
+            // Move to the next content
+            currentIndex = (currentIndex + 1) % heroContent.length;
+        }, 1000);
+    }
+
+    // Start auto-sliding
+    setInterval(updateHeroContent, 5000); // Change every 5 seconds
         function toggleMenu() {
             var menu = document.getElementById('nav-menu');
             menu.classList.toggle('mobile-menu');

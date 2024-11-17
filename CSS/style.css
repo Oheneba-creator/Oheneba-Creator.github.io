@@ -45,6 +45,7 @@ header nav {
 .menu-toggle {
     display: none;
     cursor: pointer;
+    font-size: 24px;
 }
 
 #nav-menu {
@@ -67,11 +68,11 @@ header nav {
 
 #nav-menu li a:hover {
     color: #f5f7f8;
-    background-color: blue;
+    background-color: orangered;
 }
 
 #btn {
-    background-color: blue;
+    background-color: orangered;
     color: white;
     border-radius: 20px;
     padding: 10px 20px;
@@ -85,14 +86,14 @@ header nav {
 }
 .testimonials {
     padding: 50px 20px;
-    background-color: rgba(0, 0, 10, 0.719);
+    background-color: orangered;
     text-align: center;
 }
 
 .testimonials h2 {
     margin-bottom: 20px;
     font-size: 2em;
-    color: blue;
+    color: rgb(247, 246, 246);
 }
 
 .testimonial-slider {
@@ -120,12 +121,12 @@ header nav {
     font-size: 1.2em;
     font-style: italic;
     margin-bottom: 10px;
-    color: #fffefe;
+    color: #0c0c0c;
 }
 
 .testimonial-slide p {
     font-weight: bold;
-    color: #a184f5;
+    color: rgb(247, 243, 242);
 }
 
 /* Show the first slide initially */
@@ -136,19 +137,54 @@ header nav {
 
 /* Hero Section */
 .hero {
-    height: 60vh;
+    position: relative;
+    height: 100vh;
+    background: url('https://img.freepik.com/premium-photo/unhappy-disabled-mid-aged-woman-sitting-wheel-chair-with-unhappy-look_259150-61695.jpg') no-repeat center center/cover;
     display: flex;
-    align-items: center;
     justify-content: center;
-    color: rgb(255, 255, 255);
+    align-items: center;
     text-align: center;
-    background-color: rgba(1, 1, 26, 0.603);
+    color: white;
+}
+
+.hero-overlay {
+    background: orangered; /* Semi-transparent overlay */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(255, 68, 0, 0.651);
 }
 
 .hero h1 {
-    font-size: 5rem;
-    font-weight: 700;
-    text-shadow: 2px 2px 5px rgba(1, 1, 17, 0.589);
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    max-width: 700px;
+    line-height: 1.6;
+    color: #f3f3f3;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background: #f04e30; /* Bright, engaging button color */
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.hero-btn:hover {
+    background: rgb(12, 12, 12);
+    transform: scale(1.05);
 }
 
 /* About Section */
@@ -157,8 +193,8 @@ header nav {
     margin: 50px auto;
     padding: 20px;
     text-align: center;
-    background-color: white;
-    color: blue;
+    background-color: orangered;
+    color: white;
     border-radius: 10px;
     box-shadow: 0 55px 1px rgba(1, 1, 26, 0.603);
 }
@@ -176,7 +212,7 @@ header nav {
 .about a {
     text-decoration: none;
     color: white;
-    background-color: #010108;
+    background-color: #000007;
     padding: 10px 30px;
     border-radius: 30px;
     transition: background 0.3s ease;
@@ -191,7 +227,7 @@ header nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: blue;
+    background-color: orangered;
     color: white;
     padding: 40px 20px;
     box-shadow: 0 120px 10px rgba(1, 1, 26, 0.603);
@@ -226,7 +262,7 @@ header nav {
     background-color: white;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgb(3, 3, 245);
+    box-shadow: 0 2px 10px orangered;
     text-align: center;
     transition: transform 0.3s ease;
 }
@@ -236,7 +272,7 @@ header nav {
 .service h3 {
     font-size: 1.8rem;
     margin-bottom: 20px;
-    color: blue;
+    color: orangered;
 }
 .services h2 {
     color: rgb(245, 241, 241);
@@ -253,13 +289,13 @@ header nav {
 
 /* Call-to-Action Section */
 .call-to-action {
-    background-color: blue;
+    background-color: orangered;
     color: white;
     text-align: center;
     padding: 40px 20px;
     margin-top: 50px;
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgb(4, 4, 245);
+    box-shadow: 0 2px 10px orangered;
 }
 
 .call-to-action h2 {
@@ -275,7 +311,7 @@ header nav {
 .call-to-action a {
     text-decoration: none;
     background-color: white;
-    color: blue;
+    color: orangered;
     padding: 10px 30px;
     border-radius: 30px;
     transition: background 0.3s ease;
@@ -287,72 +323,122 @@ header nav {
 }
 
 /* Footer */
+
+/* Footer Styles */
 footer {
-    background-color: black;
-    color: white;
+    background-color:rgba(0, 0, 0, 0.822);
+    color: #fff;
     padding: 40px 20px;
-    margin-top: 50px;
-    text-align: center;
+    font-family: Arial, sans-serif;
 }
 
-footer nav ul {
-    list-style: none;
-    padding: 0;
+.footer-container {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
     gap: 20px;
+}
+
+.footer-logo img {
+    max-width: 150px;
     margin-bottom: 20px;
 }
 
-footer nav ul li {
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
     margin: 0;
 }
 
-footer nav ul li a {
+.footer-nav ul li {
+    margin-bottom: 10px;
+}
+
+.footer-nav ul li a {
+    color: #fff;
     text-decoration: none;
-    color: white;
-    font-weight: 500;
+    transition: color 0.3s;
 }
 
-footer nav ul li a:hover {
-    color: blue;
+.footer-nav ul li a:hover {
+    color: #f04e30;
 }
 
-.newsletter {
-    margin-top: 20px;
+.footer-contact ul, 
+.footer-hours ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-contact ul li,
+.footer-hours ul li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-contact ul li i,
+.footer-hours ul li i {
+    color: #f04e30;
 }
 
 .newsletter h3 {
-    font-size: 1.5rem;
     margin-bottom: 10px;
 }
 
 .newsletter form {
     display: flex;
-    justify-content: center;
     gap: 10px;
-    margin-top: 10px;
+    flex-wrap: wrap;
 }
 
-.newsletter input[type="email"] {
+.newsletter input {
     padding: 10px;
     border: none;
     border-radius: 5px;
-    font-size: 1rem;
+    flex: 1;
 }
 
 .newsletter button {
     padding: 10px 20px;
     border: none;
+    background-color: #f04e30;
+    color: #fff;
     border-radius: 5px;
-    background-color: blue;
-    color: white;
-    font-size: 1rem;
     cursor: pointer;
+    transition: background 0.3s;
 }
 
 .newsletter button:hover {
-    background-color: #00050a;
+    background-color: #d63e24;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #555;
+    padding-top: 20px;
+    font-size: 0.9rem;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-contact ul, 
+    .footer-hours ul {
+        align-items: center;
+    }
 }
 
 /* WhatsApp Widget */
@@ -391,6 +477,7 @@ footer nav ul li a:hover {
         left: 0;
         background-color: rgba(3, 3, 97, 0.37);
         padding: 10px;
+    
     }
 
     #nav-menu.mobile-menu {
@@ -422,4 +509,86 @@ footer nav ul li a:hover {
 
 .social-icons a:hover {
     color: #f7faf7; /* Darker shade of blue on hover */
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.contact-form {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.contact-form h2 {
+    color: #333;
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 2px solid #f05a28;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: orangered;
+    outline: none;
+    background-color: #fff5e1;
+}
+
+.contact-form button {
+    background-color: orangered;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: rgb(19, 17, 17);
+    color: orangered;
+}
+
+.contact-form p {
+    font-size: 14px;
+    color: #555;
+}
+
+.contact-form p a {
+    color: orangered;
+    text-decoration: none;
+}
+
+.contact-form p a:hover {
+    text-decoration: underline;
 }
