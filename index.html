@@ -232,6 +232,26 @@
     </style>
 </head>
 <body>
+    <!-- Notification Modal -->
+    <div id="notification-modal" style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    ">
+        <img src="https://i.postimg.cc/d06JKvb6/Help-Days-TNF.jpg" alt="Notification" style="
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+        ">
+    </div>
     <header>
         <div class="header-container">
             <div class="logo">
@@ -413,6 +433,14 @@
     
     
     <script>
+        window.onload = function () {
+            setTimeout(function () {
+                const notificationModal = document.getElementById('notification-modal');
+                if (notificationModal) {
+                    notificationModal.style.display = 'none';
+                }
+            }, 10000); // 10 seconds
+        };
         // Hero content data
     const heroContent = [
         {
